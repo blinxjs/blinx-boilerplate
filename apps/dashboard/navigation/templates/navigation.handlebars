@@ -1,0 +1,15 @@
+{{#each children}}
+    <li class="dd-menu {{#isActive this}}active{{/isActive}}">
+        <a href="{{href}}">
+            {{label}}
+            {{#if children}}
+                    <span class="caret"></span>
+            {{/if}}
+        </a>
+        {{#if children}}
+            <ul class="dropdown-menu">
+                {{> navigation}}
+            </ul>
+        {{/if}}
+    </li>
+{{/each}}
