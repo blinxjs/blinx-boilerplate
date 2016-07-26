@@ -8,7 +8,7 @@ export default function todos(state = initialState, action) {
         case "R_ADD_TODO":
             returnObj = [
                 {
-                    id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
+                    id: Date.now(),
                     completed: false,
                     text: action.text
                 },

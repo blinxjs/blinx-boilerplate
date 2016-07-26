@@ -37410,9 +37410,7 @@ webpackJsonp([0,1],[
 	    switch (action.type) {
 	        case "R_ADD_TODO":
 	            returnObj = [{
-	                id: state.reduce(function (maxId, todo) {
-	                    return Math.max(todo.id, maxId);
-	                }, -1) + 1,
+	                id: Date.now(),
 	                completed: false,
 	                text: action.text
 	            }].concat((0, _toConsumableArray3.default)(state));
@@ -38608,4 +38606,4 @@ webpackJsonp([0,1],[
 
 /***/ }
 ]);
-//# sourceMappingURL=main-d4bc02331c475ae57d01.js.map
+//# sourceMappingURL=main-0fe50743e15dea9b50db.js.map
