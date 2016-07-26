@@ -52,6 +52,11 @@ export default {
                         routeName: "dashboard.todos",
                         href: "#/dashboard/todos",
                         children: []
+                    },{
+                        label: "User",
+                        routeName: "dashboard.user",
+                        href: "#/dashboard/user",
+                        children: []
                     }]
                 }
             },
