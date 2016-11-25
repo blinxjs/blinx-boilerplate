@@ -1,9 +1,10 @@
 {
   "name": "blinx-boilerplate",
   "version": "0.1.0",
-  "description": "A starter boilerplate for a webapp using blinx, blinx-router, handlebars, redux and webpack",
+  "description": "A starter boilerplate for a webapp using blinx, blinx-router, handlebars and webpack",
   "main": "app.js",
   "scripts": {
+    "start": "http-server --silent -c-1",
     "dev": "webpack",
     "dev:watch": "webpack --watch"
   },
@@ -15,16 +16,14 @@
   "author": "durgesh.priyaranjan@flipkart.com",
   "license": "MIT",
   "dependencies": {
-    "blinx": "0.8.0",
+    "blinx": "0.9.3",
     "blinx-extensions": "0.1.4",
     "blinx-modules": "0.0.1",
-    "blinx-router": "0.9.2",
-    "bootstrap": "3.3.6",
+    "blinx-router": "0.9.5",
     "handlebars": "^4.0.5",
-    "less": "2.7.1",
-    "redux": "3.5.2",
-    "vdom-parser": "1.3.2",
-    "virtual-dom": "2.1.1"
+    "jquery": "2.2.2",
+    "set-dom": "git+https://github.com/blinxjs/set-dom.git",
+    "todomvc-app-css": "2.0.6"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
@@ -38,10 +37,12 @@
     "babel-runtime": "6.6.1",
     "clean-webpack-plugin": "^0.1.8",
     "css-loader": "^0.23.1",
+    "expose-loader": "0.7.1",
     "file-loader": "0.9.0",
     "handlebars-loader": "^1.1.4",
     "html-webpack-plugin": "^2.9.0",
-    "less-loader": "^2.2.2",
+    "http-server": "0.9.0",
+    "imports-loader": "0.6.5",
     "node-libs-browser": "^1.0.0",
     "script-loader": "^0.6.1",
     "style-loader": "^0.13.0",

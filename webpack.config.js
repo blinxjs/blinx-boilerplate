@@ -2,8 +2,6 @@ var path = require("path");
 var webpack = require("webpack");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-var enviroment = require('./enviroment.js');
-
 
 module.exports = {
     entry: [
@@ -14,8 +12,8 @@ module.exports = {
     output: {
         publicPath: "minified/scripts/",
         path: __dirname + "/minified/scripts/",
-        filename: "[name]-[hash].js",
-        chunkname: "[name]-[hash].js"
+        filename: "[name].js",
+        chunkname: "[name].js"
     },
     module: {
         loaders: [
@@ -45,8 +43,8 @@ module.exports = {
                 loader: "url?limit=10000&mimetype=image/svg+xml"
             },
             {
-                test: /\.less$/,
-                loader: "style!css!less"
+                test: /\.css$/,
+                loader: "style!css"
             },
             {
                 test: /\.html$/,
@@ -77,12 +75,14 @@ module.exports = {
             path.resolve('./node_modules/blinx-modules/lib')
         ],
         alias: {
-            root: enviroment.root,
-            apps: enviroment.apps,
-            custom: enviroment.custom,
-            blinxExtensions: enviroment.blinxExtensions,
-            blinxModules: enviroment.blinxModules,
-            minified: enviroment.minified
+            "root": path.resolve("./"),
+            "apps": path.resolve("./src/apps"),
+            "common": path.resolve("./src/common"),
+            "common_entensions": path.resolve("../common/extensions"),
+            "common_modules": path.resolve("../common/modules"),
+            "blinx_extensions": path.resolve("../node_modules/blinx-extensions/lib"),
+            "blinx_modules": path.resolve("../node_modules/blinx-modules/lib"),
+            "minified": path.resolve("./minified")
         },
         extensions: ['', '.js']
     },
@@ -93,8 +93,9 @@ module.exports = {
             inject: 'body',
             filename: '../../index.html'
         }),
+        new webpack.optimize.DedupePlugin(),
         new CleanWebpackPlugin(['scripts'], {
-            root: enviroment.minified,
+            root: path.resolve("./minified"),
             verbose: true,
             dry: false
         }),

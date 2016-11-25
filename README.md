@@ -21,18 +21,6 @@ Make sure that [Node.js](https://nodejs.org/en/) is intalled using command
 If not installed, visit the [https://nodejs.org/en/](https://nodejs.org/en/) to download.
 
 
-Webpack 
-```
-  npm install webpack -g
-```
-
-
-Http server
-```
-  npm install http-sever
-```
-
-
 ### Intallation
 
 ```
@@ -54,8 +42,8 @@ To keep transpilation process running in watch mode, use command
   node run dev:watch
 ```
 
-To serve the project files, run http-server in root directory using command
+To start application
 ```
-  http-server
+  npm start
 ```
 By default this should be serving on localhost:8080.
