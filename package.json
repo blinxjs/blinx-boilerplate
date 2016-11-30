@@ -16,9 +16,8 @@
   "author": "durgesh.priyaranjan@flipkart.com",
   "license": "MIT",
   "dependencies": {
-    "blinx": "0.9.3",
-    "blinx-extensions": "0.1.4",
-    "blinx-modules": "0.0.1",
+    "blinx": "0.9.4",
+    "blinx-extensions": "0.1.5",
     "blinx-router": "0.9.5",
     "handlebars": "^4.0.5",
     "jquery": "2.2.2",

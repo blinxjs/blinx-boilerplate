@@ -5,13 +5,13 @@ import "./global.css";
 import "./node_modules/todomvc-app-css/index.css";
 
 // Import Blinx and BlinxRouter
-import Blinx from "./src/blinx";
+import Blinx from "blinx";
 import Router from "blinx-router";
 
 // Import global extensions
 import Logger from "blinx-extensions/lib/logger-g-ext";
-import EventBind from "./src/common/extensions/bind-ext";
-import SmartRender from "./src/common/extensions/smart-render";
+import EventBind from "blinx-extensions/lib/bind-ext";
+import SmartRender from "blinx-extensions/lib/smart-render";
 
 // Import routes
 import dashboard from "apps/dashboard/routes";
@@ -36,7 +36,7 @@ Router.configure([].concat(dashboard, todos, counter, docs), {
     history: true,
     listener: true,
     autoCleanUp: false,
-    defaultRoute: "dashboard.todo",
+    defaultRoute: "dashboard.todos",
     ignoreSearch: true
 });
 Router.start();
